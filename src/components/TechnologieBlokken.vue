@@ -1,8 +1,16 @@
 <template>
   <div class="tech-blokken">
-    <div v-for="tech in gesorteerdetechnologieen" :key="tech.naam" class="tech-blok" :id="tech.naam.toLowerCase().replace(/ /g, '-')">
+    <div v-for="tech in gesorteerdetechnologieen" 
+         :key="tech.naam" 
+         class="tech-blok" 
+         :id="tech.naam.toLowerCase().replace(/ /g, '-')"
+    >
       <div class="tech-header">
-        <span v-for="type in (Array.isArray(tech.type) ? tech.type : [tech.type])" :key="type" class="type-dot" :class="type"></span>
+        <span v-for="type in (Array.isArray(tech.type) ? tech.type : [tech.type])" 
+              :key="type" 
+              class="type-dot" 
+              :class="type"
+        ></span>
         <span class="tech-title">{{ tech.naam }}</span>
       </div>
       <div v-if="tech.notitie" class="tech-note">{{ tech.notitie }}</div>
@@ -25,7 +33,7 @@
 </template>
 
 <script setup>
-import { computed } from 'vue';
+import { computed, onMounted } from 'vue';
 import { Icon } from 'jao-icons';
 
 const props = defineProps({
@@ -52,6 +60,21 @@ const gesorteerdetechnologieen = computed(() => {
     const bTypes = Array.isArray(b.type) ? b.type.length : 1;
     return aTypes - bTypes;
   });
+});
+
+// Scroll naar het element als er een hashtag in de URL staat
+onMounted(() => {
+  // Wacht even tot de DOM volledig is geladen
+  setTimeout(() => {
+    const hash = window.location.hash;
+    if (hash) {
+      const id = hash.slice(1);
+      const element = document.getElementById(id);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+    }
+  }, 100);
 });
 </script>
 
@@ -82,6 +105,8 @@ const gesorteerdetechnologieen = computed(() => {
   gap: 1rem;
   border: 1px solid rgba(0, 0, 0, 0.05);
   text-align: left;
+  transform-origin: center;
+  will-change: transform, opacity;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 

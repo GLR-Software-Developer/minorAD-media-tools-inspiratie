@@ -1,6 +1,7 @@
 <script setup lang="ts">
-import { ref, computed, onBeforeUnmount } from 'vue';
+import { ref, computed, onMounted, onBeforeUnmount } from 'vue';
 import { useRouter } from 'vue-router';
+import gsap from 'gsap';
 import type { Technologie } from '../services/TechnologieService';
 
 const router = useRouter();
@@ -10,6 +11,7 @@ const props = defineProps<{
   y: number; // y-positie binnen cirkel (in %)
 }>();
 
+const dotRef = ref<HTMLElement | null>(null);
 const showPopup = ref(false);
 const isHovered = ref(false);
 const isPopupHovered = ref(false);
@@ -78,6 +80,44 @@ const handleMouseLeavePopup = () => {
   scheduleClose();
 };
 
+// Animatie voor de dot
+onMounted(() => {
+    
+    const isFirstVisit = !sessionStorage.getItem('hasVisitedHome');
+  if (isFirstVisit) {
+    if (dotRef.value) {
+        // Reset initial state
+        gsap.set(dotRef.value, {
+        scale: 0,
+        opacity: 1
+        });
+        gsap.set(dotRef.value.querySelector('.dot-label'), {
+        opacity: 0
+        });
+
+        // Animeer de dot met een vertraging gebaseerd op een random waarde
+        const randomDelay = Math.random() * 2; // Random vertraging tussen 0 en 0.5 seconden
+        
+        const timeline = gsap.timeline({
+        delay: randomDelay + .8
+        });
+
+        // Pop-in animatie voor de dot
+        timeline.to(dotRef.value, {
+        scale: 1,
+        duration: 0.5,
+        ease: "back.out(1.7)"
+        });
+
+        // Fade in de label
+        timeline.to(dotRef.value.querySelector('.dot-label'), {
+        opacity: 1,
+        duration: 0.3
+        }, "-=0.1");
+    }
+  }
+});
+
 // Ruim de timer op als het component wordt vernietigd
 onBeforeUnmount(() => {
   clearCloseTimer();
@@ -86,6 +126,7 @@ onBeforeUnmount(() => {
 
 <template>
   <div 
+    ref="dotRef"
     class="tech-dot" 
     :style="{ top: `${y}%`, left: `${x}%`, zIndex: zIndex }"
     @mouseenter="handleMouseEnterDot"
@@ -124,6 +165,7 @@ onBeforeUnmount(() => {
   flex-direction: column;
   align-items: center;
   cursor: pointer;
+  will-change: transform, opacity;
 }
 
 .dot-circle {

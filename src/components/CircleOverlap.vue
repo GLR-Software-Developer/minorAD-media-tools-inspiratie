@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import { computed, ref } from 'vue';
+import { computed, ref, onMounted } from 'vue';
+import gsap from 'gsap';
 import Circle from './Circle.vue';
 import TechnologieDot from './TechnologieDot.vue';
 import technologieService from '../services/TechnologieService';
@@ -9,6 +10,10 @@ import type { Technologie } from '../services/TechnologieService';
 const props = defineProps<{ radius?: number }>();
 const radius = props.radius ?? 20;
 const diameter = computed(() => radius * 2.5);
+
+// Refs voor de cirkels
+const circleRefs = ref<HTMLElement[]>([]);
+const circleLabels = ref<HTMLElement[]>([]);
 
 // Hoeken voor de drie cirkels (in radialen)
 const angles = [-90, 150, 30].map(a => a * Math.PI / 180);
@@ -388,30 +393,79 @@ function genereeerSpiralePunten(): { tech: Technologie; x: number; y: number; ca
 }
 
 const alleStipPosities = genereeerSpiralePunten();
+
+// Check of dit de eerste keer is dat de pagina wordt bezocht in deze sessie
+const isFirstVisit = !sessionStorage.getItem('hasVisitedHome');
+
+// Animatie voor de cirkels
+onMounted(() => {
+  if (isFirstVisit) {
+    // Reset initial state voor alle elementen
+    gsap.set([circleRefs.value], {
+      scale: 0,
+      opacity: 0
+    });
+
+    gsap.set('.tech-dot', {
+      scale: 0,
+      opacity: 0
+    });
+
+    // Maak een timeline voor de sequentie
+    const tl = gsap.timeline();
+
+    // Animeer eerst alle cirkels met stagger
+    tl.to(circleRefs.value, {
+      scale: 1,
+      opacity: 1,
+      duration: 0.7,
+      ease: "back.out(1.7)",
+      stagger: {
+        amount: 0.5 // Totale tijd tussen eerste en laatste animatie
+      }
+    });
+
+    // Wacht tot alle cirkels klaar zijn en animeer dan de dots
+    tl.to('.tech-dot', {
+      scale: 1,
+      opacity: 1,
+      duration: 0.5,
+      ease: "back.out(1.7)",
+      stagger: {
+        amount: 1,
+        from: "random"
+      }
+    }, ">");
+
+    // Sla op dat de homepage is bezocht in deze sessie
+    sessionStorage.setItem('hasVisitedHome', 'true');
+  } else {
+    // Als het niet de eerste keer is, toon alles direct
+    gsap.set([circleRefs.value], {
+      scale: 1,
+      opacity: 1
+    });
+
+    gsap.set('.tech-dot', {
+      scale: 1,
+      opacity: 1
+    });
+  }
+});
 </script>
 
 <template>
   <div class="circle-container">
     <div class="circle-square">
       <!-- De drie cirkels -->
-      <Circle
-        color="#4FC3F7"
-        label="Audio"
-        :diameter="diameter"
-        :style="{ transform: 'translate(-50%, -50%)', top: `${positions[0].y }%`, left: `${positions[0].x}%` }"
-      />
-      <Circle
-        color="#F44336"
-        label="Visueel"
-        :diameter="diameter"
-        :style="{ transform: 'translate(-50%, -50%)', top: `${positions[1].y }%`, left: `${positions[1].x}%` }"
-      />
-      <Circle
-        color="#FFB300"
-        label="Data"
-        :diameter="diameter"
-        :style="{ transform: 'translate(-50%, -50%)', top: `${positions[2].y }%`, left: `${positions[2].x}%` }"
-      />
+      <div v-for="(position, index) in positions" :key="index" class="circle-wrapper" :ref="(el: HTMLElement | null) => { if (el) circleRefs[index] = el }">
+        <Circle
+          :color="index === 0 ? '#4FC3F7' : index === 1 ? '#F44336' : '#FFB300'"
+          :label="index === 0 ? 'Audio' : index === 1 ? 'Visueel' : 'Data'"
+          :diameter="diameter"
+          :style="{ transform: 'translate(-50%, -50%)', top: `${position.y}%`, left: `${position.x}%` }"
+        />
+      </div>
       
       <!-- Technologie stippen -->
       <div class="stip-container">
@@ -443,6 +497,25 @@ const alleStipPosities = genereeerSpiralePunten();
   height: 70vmin;
   background: none;
 }
+
+.circle-wrapper {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform-origin: center;
+  will-change: transform, opacity;
+}
+
+.circle-label {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #333;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+  will-change: opacity;
+}
+
 .stip-container {
   position: absolute;
   width: 100%;
@@ -450,5 +523,10 @@ const alleStipPosities = genereeerSpiralePunten();
   top: 0;
   left: 0;
   z-index: 5;
+}
+
+.tech-dot {
+  opacity: 1;
+  scale: 1;
 }
 </style> 
