@@ -1,0 +1,17 @@
+[
+  {
+    "slug": "audio",
+    "title": "Audio",
+    "color": "#4FC3F7"
+  },
+  {
+    "slug": "visueel",
+    "title": "Visueel",
+    "color": "#F44336"
+  },
+  {
+    "slug": "data",
+    "title": "Data",
+    "color": "#FFB300"
+  }
+] 

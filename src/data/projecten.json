@@ -1,0 +1,82 @@
+[
+  {
+    "titel": "Interactieve Visualisatie",
+    "omschrijving": "Een interactieve datavisualisatie gemaakt met Touchdesigner en gekoppeld aan live audio input.",
+    "media": {
+      "type": "afbeelding",
+      "url": "pad/naar/afbeelding.jpg"
+    },
+    "technologieen": ["Touchdesigner"],
+    "categorieën": ["visueel", "data", "audio"]
+  },
+  {
+    "titel": "Generatieve Kunst met LLM",
+    "omschrijving": "Een kunstproject waarbij een LLM wordt gebruikt om visuele patronen te genereren op basis van tekstinput.",
+    "media": {
+      "type": "video",
+      "url": "pad/naar/video.mp4"
+    },
+    "technologieen": ["LLM API", "Touchdesigner"],
+    "categorieën": ["visueel", "data"]
+  },
+  {
+    "titel": "3D Animatie Game Character",
+    "omschrijving": "Een geanimeerd 3D karakter gemaakt in Blender en geëxporteerd naar Rive voor gebruik in games.",
+    "media": {
+      "type": "afbeelding",
+      "url": "pad/naar/karakter.jpg"
+    },
+    "technologieen": ["Blender", "Rive"],
+    "categorieën": ["visueel"]
+  },
+  {
+    "titel": "Audio Reactieve Visualisatie met P5.js",
+    "omschrijving": "Een interactieve webbased visualisatie die reageert op muziek en microfooninput, gebouwd met P5.js en de Web Audio API.",
+    "media": {
+      "type": "video",
+      "url": "pad/naar/audio-visualisatie.mp4"
+    },
+    "technologieen": ["P5.js"],
+    "categorieën": ["visueel", "audio"]
+  },
+  {
+    "titel": "Interactieve Muzikale 3D Compositie",
+    "omschrijving": "Een interactieve 3D webervaring waarbij gebruikers door interactie met objecten een muzikale compositie creëren.",
+    "media": {
+      "type": "video",
+      "url": "pad/naar/muziekinteractie.mp4"
+    },
+    "technologieen": ["Three.js", "Max/MSP"],
+    "categorieën": ["visueel", "audio"]
+  },
+  {
+    "titel": "Muzikale Stijl-Analyse Dashboard",
+    "omschrijving": "Een webapplicatie die muziekstukken analyseert op toonsoort, ritme en harmonie, en deze visualiseert in een interactief dashboard.",
+    "media": {
+      "type": "afbeelding",
+      "url": "pad/naar/muziekanalyse.jpg"
+    },
+    "technologieen": ["Librosa", "Tonal.js"],
+    "categorieën": ["audio", "data"]
+  },
+  {
+    "titel": "Stemming-Gestuurd Muziek Aanbevelingssysteem",
+    "omschrijving": "Een applicatie die stemmingsanalyse toepast op stemopnames en muziekbibliotheekdata om passende muziekstukken te suggereren.",
+    "media": {
+      "type": "afbeelding",
+      "url": "pad/naar/muziekaanbevelingen.jpg"
+    },
+    "technologieen": ["Librosa", "HuggingFace"],
+    "categorieën": ["audio", "data"]
+  },
+  {
+    "titel": "AI Verhalende Audiogids",
+    "omschrijving": "Een app die LLM-gegenereerde verhalen omzet naar natuurlijk klinkende audio met emotionele intonatie, geschikt voor interactieve audiogidsen.",
+    "media": {
+      "type": "audio",
+      "url": "pad/naar/audiogids-demo.mp3"
+    },
+    "technologieen": ["ElevenLabs", "LLM API"],
+    "categorieën": ["audio", "data"]
+  }
+] 

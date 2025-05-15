@@ -1,0 +1,20 @@
+@font-face {
+  font-family: 'Fixedsys';
+  src: url('/fonts/fixed-sys.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  src: url('/fonts/OpenSans-VariableFont_wdth,wght.ttf') format('truetype');
+  font-weight: 1 999;
+  font-display: swap;
+}
+
+body, .app {
+  font-family: 'Fixedsys', 'FixedSysExcelsior', monospace;
+}
+
+.center-text, .group-card h3 {
+  font-family: 'Open Sans', Arial, sans-serif;
+} 

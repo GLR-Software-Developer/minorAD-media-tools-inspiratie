@@ -1,0 +1,294 @@
+[
+  {
+    "naam": "Sonic Pi",
+    "omschrijving": "Een live codeeromgeving waarmee je muziek kunt maken door code te schrijven.",
+    "notitie": "",
+    "type": "audio",
+    "links": {
+      "website": "https://sonic-pi.net/",
+      "documentatie": "https://sonic-pi.net/tutorial.html",
+      "tutorials": [
+        { "titel": "Making Music with Code", "url": "https://www.youtube.com/watch?v=QGLPinGZhfg" }
+      ]
+    },
+    "examples": [
+      { "titel": "", "notitie": "", "afbeelding": "", "bron": "" },
+      { "titel": "", "notitie": "", "afbeelding": "", "bron": "" },
+      { "titel": "", "notitie": "", "afbeelding": "", "bron": "" }
+    ]
+  },
+  {
+    "naam": "Touchdesigner",
+    "omschrijving": "Een visuele programmeeromgeving voor het maken van real-time interactieve multimediaprojecten.",
+    "notitie": "",
+    "type": ["audio", "visueel", "data"],
+    "links": {
+      "website": "https://derivative.ca/",
+      "documentatie": "https://derivative.ca/UserGuide/",
+      "tutorials": [
+        { "titel": "Officiele leeromgeving van Touchdesigner", "url": "https://derivative.ca/learn" }
+      ]
+    },
+    "examples": [
+      { "titel": "", "notitie": "", "afbeelding": "", "bron": "" },
+      { "titel": "", "notitie": "", "afbeelding": "", "bron": "" },
+      { "titel": "", "notitie": "", "afbeelding": "", "bron": "" }
+    ]
+  },
+  {
+    "naam": "Mediapipe",
+    "omschrijving": "Een framework van Google voor het bouwen van multimodale (video, audio, etc.) machine learning pipelines.",
+    "notitie": "",
+    "type": ["audio", "visueel", "data"],
+    "links": {
+      "website": "https://ai.google.dev/edge/mediapipe/solutions/studio",
+      "documentatie": "https://ai.google.dev/edge/mediapipe/solutions/guide",
+      "tutorials": [
+        { "titel": "Mediapipe voor dummies", "url": "https://www.assemblyai.com/blog/mediapipe-for-dummies/" },
+        { "titel": "Advanced Computer Vision with Python", "url": "https://www.youtube.com/watch?v=01sAkU_NvOY" }
+      ]
+    },
+    "examples": [
+      { "titel": "", "notitie": "", "afbeelding": "", "bron": "" },
+      { "titel": "", "notitie": "", "afbeelding": "", "bron": "" },
+      { "titel": "", "notitie": "", "afbeelding": "", "bron": "" }
+    ]
+  },
+  {
+    "naam": "P5.js",
+    "omschrijving": "Een JavaScript-bibliotheek waarmee je creatieve en interactieve visuele en audio projecten kunt maken in de browser.",
+    "notitie": "Fork van Processing voor het web",
+    "type": ["audio", "visueel"],
+    "links": {
+      "website": "https://p5js.org/",
+      "documentatie": "https://p5js.org/reference/",
+      "tutorials": [
+        { "titel": "Officiële tutorials P5.js", "url": "https://p5js.org/tutorials" },
+        { "titel": "Codetrain P5 video's", "url": "https://www.youtube.com/playlist?list=PLRqwX-V7Uu6Zy51Q-x9tMWIv9cueOFTFA" }
+      ]
+    },
+    "examples": [
+      { "titel": "", "notitie": "", "afbeelding": "", "bron": "" },
+      { "titel": "", "notitie": "", "afbeelding": "", "bron": "" },
+      { "titel": "", "notitie": "", "afbeelding": "", "bron": "" }
+    ]
+  },
+  {
+    "naam": "Cycling74",
+    "omschrijving": "Een visuele programmeeromgeving speciaal ontworpen voor muziek, audio en multimedia die ook kan worden gebruikt voor interactieve installaties.",
+    "notitie": "Cyclic en Ableton Live gebruiken deze technologie",
+    "type": ["audio", "visueel"],
+    "links": {
+      "website": "https://cycling74.com/products/max-9",
+      "documentatie": "https://docs.cycling74.com/",
+      "tutorials": [
+        { "titel": "Officiele tutorials Cycling74", "url": "https://cycling74.com/tutorials" }
+      ]
+    },
+    "examples": [
+      { "titel": "", "notitie": "", "afbeelding": "", "bron": "" },
+      { "titel": "", "notitie": "", "afbeelding": "", "bron": "" },
+      { "titel": "", "notitie": "", "afbeelding": "", "bron": "" }
+    ]
+  },
+  {
+    "naam": "Three.js",
+    "omschrijving": "Een JavaScript 3D-bibliotheek waarmee je complexe 3D-visualisaties in de browser kunt maken, met ondersteuning voor audio-interactie.",
+    "notitie": "Vaak gebruikt voor interactieve 3D websites",
+    "type": ["audio", "visueel"],
+    "links": {
+      "website": "https://threejs.org/",
+      "documentatie": "https://threejs.org/docs/",
+      "tutorials": [
+        { "titel": "Three.js Tutorial For Absolute Beginners", "url": "https://www.youtube.com/watch?v=xJAfLdUgdc4" }
+      ]
+    },
+    "examples": [
+      { "titel": "", "notitie": "", "afbeelding": "", "bron": "" },
+      { "titel": "", "notitie": "", "afbeelding": "", "bron": "" },
+      { "titel": "", "notitie": "", "afbeelding": "", "bron": "" }
+    ]
+  },
+  {
+    "naam": "Librosa",
+    "omschrijving": "Een Python-bibliotheek voor audioanalyse, waarmee je muziek en geluid kunt verwerken en analyseren met geavanceerde algoritmes.",
+    "notitie": "Veel gebruikt voor MIR (Music Information Retrieval)",
+    "type": ["audio", "data"],
+    "links": {
+      "website": "https://librosa.org/",
+      "documentatie": "https://librosa.org/doc/latest/",
+      "tutorials": [
+        { "titel": "Librosa Audio and Music Signal Analysis in Python", "url": "https://www.youtube.com/watch?v=MhOdbtPhbLU" }
+      ]
+    },
+    "examples": [
+      { "titel": "", "notitie": "", "afbeelding": "", "bron": "" },
+      { "titel": "", "notitie": "", "afbeelding": "", "bron": "" },
+      { "titel": "", "notitie": "", "afbeelding": "", "bron": "" }
+    ]
+  },
+  {
+    "naam": "Tonal.js",
+    "omschrijving": "Een JavaScript-bibliotheek voor muziektheorie, waarmee je toonladders, akkoorden en toonhoogtes kunt analyseren en genereren.",
+    "notitie": "Onderdeel van de Tone.js familie van muzikale tools",
+    "type": ["audio"],
+    "links": {
+      "website": "https://github.com/tonaljs/tonal",
+      "documentatie": "https://tonaljs.github.io/tonal/docs/",
+      "tutorials": [
+        { "titel": "Build a Chord Player with Javascript, Tonal.js and Howler.js (Music & Coding YT Channel)", "url": "https://www.youtube.com/watch?v=Aoru3iGDd8Q" }
+      ]
+    },
+    "examples": [
+      { "titel": "", "notitie": "", "afbeelding": "", "bron": "" },
+      { "titel": "", "notitie": "", "afbeelding": "", "bron": "" },
+      { "titel": "", "notitie": "", "afbeelding": "", "bron": "" }
+    ]
+  },
+  {
+    "naam": "Web Speech API",
+    "omschrijving": "Een JavaScript API voor spraakherkenning (speech-to-text) en spraaksynthese (text-to-speech) in webbrowsers.",
+    "notitie": "Ondersteund door de meeste moderne browsers",
+    "type": ["audio"],
+    "links": {
+      "website": "https://developer.chrome.com/blog/voice-driven-web-apps-introduction-to-the-web-speech-api/",
+      "documentatie": "https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API",
+      "tutorials": [
+        { "titel": "How to Build a Text-to-Speech App with Web Speech API", "url": "https://www.digitalocean.com/community/tutorials/how-to-build-a-text-to-speech-app-with-web-speech-api" },
+        { "titel": "MDN Tutorial on Web Speech API", "url": "https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API/Using_the_Web_Speech_API" }
+      ]
+    },
+    "examples": [
+      { "titel": "", "notitie": "", "afbeelding": "", "bron": "" },
+      { "titel": "", "notitie": "", "afbeelding": "", "bron": "" },
+      { "titel": "", "notitie": "", "afbeelding": "", "bron": "" }
+    ]
+  },
+  {
+    "naam": "ElevenLabs",
+    "omschrijving": "Een AI-gedreven platform voor realistische spraaksynthese met emotie-bewuste stemmen en stemkloning.",
+    "notitie": "Biedt API-toegang voor text-to-speech met natuurlijke intonatie",
+    "type": ["audio", "data"],
+    "links": {
+      "website": "https://elevenlabs.io/",
+      "documentatie": "https://docs.elevenlabs.io/",
+      "tutorials": [
+        { "titel": "Officiële quickstart ElevenLabs", "url": "https://docs.elevenlabs.io/quickstart" },
+        { "titel": "Officiële Python, Javascript en andere API modules", "url": "https://github.com/elevenlabs/elevenlabs" }
+      ]
+    },
+    "examples": [
+      { "titel": "", "notitie": "", "afbeelding": "", "bron": "" },
+      { "titel": "", "notitie": "", "afbeelding": "", "bron": "" },
+      { "titel": "", "notitie": "", "afbeelding": "", "bron": "" }
+    ]
+  },
+  {
+    "naam": "Rive",
+    "omschrijving": "Een platform voor het maken van interactieve animaties die op verschillende platforms kunnen draaien.",
+    "notitie": "Functionele animaties voor web, mobiel en desktop",
+    "type": "visueel",
+    "links": {
+      "website": "https://rive.app/",
+      "documentatie": "https://rive.app/docs/",
+      "tutorials": [
+        { "titel": "Officiële Youtube kanaal Rive", "url": "https://www.youtube.com/c/RiveApp" }
+      ]
+    },
+    "examples": [
+      { "titel": "", "notitie": "", "afbeelding": "", "bron": "" },
+      { "titel": "", "notitie": "", "afbeelding": "", "bron": "" },
+      { "titel": "", "notitie": "", "afbeelding": "", "bron": "" }
+    ]
+  },
+  {
+    "naam": "Houdini",
+    "omschrijving": "Een 3D animatie software suite die procedurele werkwijzen biedt voor modeling, animatie, rendering en meer.",
+    "notitie": "",
+    "type": ["visueel", "data"],
+    "links": {
+      "website": "https://www.sidefx.com/education/education-programs/students",
+      "documentatie": "https://www.sidefx.com/docs/",
+      "tutorials": [
+        { "titel": "Officiële tutorials Houdini", "url": "https://www.sidefx.com/tutorials/" }
+      ]
+    },
+    "examples": [
+      { "titel": "", "notitie": "", "afbeelding": "", "bron": "" },
+      { "titel": "", "notitie": "", "afbeelding": "", "bron": "" },
+      { "titel": "", "notitie": "", "afbeelding": "", "bron": "" }
+    ]
+  },
+  {
+    "naam": "MatterJS",
+    "omschrijving": "Een 2D physics engine voor het web, waarmee je realistische bewegingen kunt simuleren.",
+    "notitie": "",
+    "type": ["visueel", "data"],
+    "links": {
+      "website": "https://brm.io/matter-js/",
+      "documentatie": "https://brm.io/matter-js/docs/",
+      "tutorials": [
+        { "titel": "Demo pagina MatterJS", "url": "https://brm.io/matter-js/demo/" },
+        { "titel": "Codetrain MatterJS (Plinko game)", "url": "https://www.youtube.com/watch?v=KakpnfDv_f0" }
+      ]
+    },
+    "examples": [
+      { "titel": "", "notitie": "", "afbeelding": "", "bron": "" },
+      { "titel": "", "notitie": "", "afbeelding": "", "bron": "" },
+      { "titel": "", "notitie": "", "afbeelding": "", "bron": "" }
+    ]
+  },
+  {
+    "naam": "OpenAI API",
+    "omschrijving": "APIs voor het gebruik van large language models voor tekstgeneratie, analyse en andere AI-toepassingen.",
+    "notitie": "Mag ook voor Claude, Gemini, Deepseek of andere LLM's gebruiken, concepten blijven hetzelfde.",
+    "type": "data",
+    "links": {
+      "website": "https://openai.com/api/",
+      "documentatie": "https://platform.openai.com/docs/",
+      "tutorials": [
+        { "titel": "Officiële voorbeelden OpenAI API", "url": "https://platform.openai.com/examples" }
+      ]
+    },
+    "examples": [
+      { "titel": "", "notitie": "", "afbeelding": "", "bron": "" },
+      { "titel": "", "notitie": "", "afbeelding": "", "bron": "" },
+      { "titel": "", "notitie": "", "afbeelding": "", "bron": "" }
+    ]
+  },
+  {
+    "naam": "Ollama",
+    "omschrijving": "Een tool voor het lokaal draaien van grote taalmodellen voor tekst- en codegeneratie.",
+    "notitie": "",
+    "type": "data",
+    "links": {
+      "website": "https://ollama.ai/",
+      "documentatie": "https://github.com/ollama/ollama",
+      "tutorials": [
+      ]
+    },
+    "examples": [
+      { "titel": "", "notitie": "", "afbeelding": "", "bron": "" },
+      { "titel": "", "notitie": "", "afbeelding": "", "bron": "" },
+      { "titel": "", "notitie": "", "afbeelding": "", "bron": "" }
+    ]
+  },
+  {
+    "naam": "D3JS",
+    "omschrijving": "Een krachtige JavaScript-bibliotheek voor het maken van interactieve en dynamische datavisualisaties in de browser.",
+    "notitie": "Vooral gebruikt voor data visualisatie, maar kan ook voor animaties gebruikt worden.",
+    "type": ["visueel", "data"],
+    "links": {
+      "website": "https://d3js.org/",
+      "documentatie": "https://d3js.org/api",
+      "tutorials": [
+        { "titel": "Officiële voorbeelden D3", "url": "https://observablehq.com/@d3/gallery" }
+      ]
+    },
+    "examples": [
+      { "titel": "", "notitie": "", "afbeelding": "", "bron": "" },
+      { "titel": "", "notitie": "", "afbeelding": "", "bron": "" },
+      { "titel": "", "notitie": "", "afbeelding": "", "bron": "" }
+    ]
+  }
+] 
