@@ -142,8 +142,8 @@ onBeforeUnmount(() => {
       <h3>{{ technologie.naam }}</h3>
       <p>{{ technologie.omschrijving }}</p>
       
-      <div v-if="technologie.notitie" class="notitie">
-        {{ technologie.notitie }}
+      <div v-if="technologie.note" class="note">
+        {{ technologie.note }}
       </div>
       
       <div class="popup-links">
@@ -229,7 +229,7 @@ onBeforeUnmount(() => {
   line-height: 1.4;
 }
 
-.notitie {
+.note {
   font-size: 0.8rem;
   color: #666;
   margin-bottom: 0.8rem;

@@ -8,6 +8,8 @@ defineProps<{
   right?: string;
   diameter?: number | string;
 }>();
+
+// const link = 'https://www.google.com';
 </script>
 
 <template>
@@ -46,6 +48,8 @@ defineProps<{
 
 .label {
   font-family: Arial, sans-serif;
+  position: relative;
+  z-index: 1;
 }
 
 @media (max-width: 768px) {

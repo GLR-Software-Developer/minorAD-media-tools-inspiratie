@@ -1,20 +1,28 @@
 import techDataJson from '../data/technologieen.json';
-import projectDataJson from '../data/projecten.json';
 
 export interface Technologie {
   naam: string;
   omschrijving: string;
-  notitie: string;
+  note: string;
   type: string | string[];
   links: {
     website: string;
     documentatie: string;
-    tutorials: string[];
+    tutorials: {
+      title: string;
+      url: string;
+    }[];
   };
+  examples: {
+    title: string;
+    note: string;
+    image: string;
+    url: string;
+  }[];
 }
 
 export interface Project {
-  titel: string;
+  title: string;
   omschrijving: string;
   media: {
     type: string;
@@ -29,12 +37,10 @@ export interface Project {
  */
 class TechnologieService {
   private technologieen: Technologie[];
-  private projecten: Project[];
   
   constructor() {
     // Type casting om import compatibel te maken met onze interfaces
     this.technologieen = techDataJson as Technologie[];
-    this.projecten = projectDataJson as Project[];
   }
   
   /**
@@ -64,29 +70,6 @@ class TechnologieService {
    */
   getTechnologieByName(name: string): Technologie | undefined {
     return this.technologieen.find(tech => tech.naam === name);
-  }
-  
-  /**
-   * Verkrijg alle projecten
-   */
-  getAllProjects(): Project[] {
-    return this.projecten;
-  }
-  
-  /**
-   * Verkrijg projecten voor een specifieke categorie
-   * @param category - De categorie (audio, visueel, data)
-   */
-  getProjectsByCategory(category: string): Project[] {
-    return this.projecten.filter(project => project.categorieën.includes(category));
-  }
-  
-  /**
-   * Verkrijg projecten die een specifieke technologie gebruiken
-   * @param technology - De naam van de technologie
-   */
-  getProjectsByTechnology(technology: string): Project[] {
-    return this.projecten.filter(project => project.technologieen.includes(technology));
   }
 }
 

@@ -13,20 +13,40 @@
         ></span>
         <span class="tech-title">{{ tech.naam }}</span>
       </div>
-      <div v-if="tech.notitie" class="tech-note">{{ tech.notitie }}</div>
+      <div v-if="tech.note" class="tech-note">{{ tech.note }}</div>
       <div class="tech-omschrijving">{{ tech.omschrijving }}</div>
       <div class="tech-links">
-        <a v-if="tech.links && tech.links.website" :href="tech.links.website" target="_blank" title="Website" class="icon-link" v-html="circleIcon" />
-        <a v-if="tech.links && tech.links.documentatie" :href="tech.links.documentatie" target="_blank" title="Documentatie" class="icon-link" v-html="documentIcon" />
+        <a v-if="tech.links && tech.links.website" :href="tech.links.website" target="_blank" title="Website" class="icon-link">
+            <span v-html="circleIcon" /> &nbsp;
+            <span>Officiele website</span>
+        </a>
+        <a v-if="tech.links && tech.links.documentatie" :href="tech.links.documentatie" target="_blank" title="Documentatie" class="icon-link">
+            <span v-html="documentIcon" /> &nbsp;
+            <span>Documentatie</span>
+        </a>
       </div>
       <div v-if="tech.links && tech.links.tutorials && tech.links.tutorials.length" class="tech-tutorials">
         <span class="tutorials-label">Handige links:</span>
         <ul class="tutorials-list">
           <li v-for="(tut, i) in tech.links.tutorials" :key="i">
-            <a v-if="tut.url" :href="tut.url" target="_blank">{{ tut.titel || tut.url }}</a>
-            <span v-else>{{ tut.titel || 'Onbekende tutorial' }}</span>
+            <a v-if="tut.url" :href="tut.url" target="_blank">{{ tut.title || tut.url }}</a>
+            <span v-else>{{ tut.title || 'Onbekende tutorial' }}</span>
           </li>
         </ul>
+      </div>
+      <div v-if="tech.examples && tech.examples.length" class="tech-examples">
+        <span class="examples-label">Voorbeelden:</span>
+        <div class="examples-carousel">
+          <a v-for="(example, index) in tech.examples" 
+               :key="index" 
+               :href="example.url"
+               target="_blank"
+               class="example-card">
+            <img :src="example.image" :alt="example.title" class="example-image">
+            <div class="example-title">{{ example.title }}</div>
+            <div class="example-note">{{ example.note }}</div>
+        </a>
+        </div>
       </div>
     </div>
   </div>
@@ -165,6 +185,8 @@ onMounted(() => {
   display: inline-flex;
   align-items: center;
   transition: color 0.2s;
+  text-decoration: none;
+  color: #444;
 }
 
 .icon-link:hover {
@@ -223,5 +245,76 @@ rect["v=1"] {
     display: inline-block;
     margin-right: 0.5rem;
   }
+}
+
+.tech-examples {
+  margin-top: 1rem;
+}
+
+.examples-label {
+  font-size: 0.95rem;
+  color: #888;
+  margin-bottom: 0.8rem;
+  display: block;
+}
+
+.examples-carousel {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  padding: 0.5rem 0;
+  scrollbar-width: thin;
+  -webkit-overflow-scrolling: touch;
+}
+
+.examples-carousel::-webkit-scrollbar {
+  height: 6px;
+}
+
+.examples-carousel::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 3px;
+}
+
+.examples-carousel::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 3px;
+}
+
+.example-card {
+  flex: 0 0 auto;
+  width: 300px;
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  transition: all 0.4s;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+.example-card:hover {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+.example-image {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  border-bottom: 1px solid #eee;
+}
+
+.example-title {
+  padding: 0.8rem;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.example-note {
+    padding:0 0.8rem 0.8rem;
+  font-size: 0.9rem;
+  color: #666;
 }
 </style> 

@@ -1,6 +1,6 @@
 [
   {
-    "titel": "Interactieve Visualisatie",
+    "title": "Interactieve Visualisatie",
     "omschrijving": "Een interactieve datavisualisatie gemaakt met Touchdesigner en gekoppeld aan live audio input.",
     "media": {
       "type": "afbeelding",
@@ -10,7 +10,7 @@
     "categorieën": ["visueel", "data", "audio"]
   },
   {
-    "titel": "Generatieve Kunst met LLM",
+    "title": "Generatieve Kunst met LLM",
     "omschrijving": "Een kunstproject waarbij een LLM wordt gebruikt om visuele patronen te genereren op basis van tekstinput.",
     "media": {
       "type": "video",
@@ -20,7 +20,7 @@
     "categorieën": ["visueel", "data"]
   },
   {
-    "titel": "3D Animatie Game Character",
+    "title": "3D Animatie Game Character",
     "omschrijving": "Een geanimeerd 3D karakter gemaakt in Blender en geëxporteerd naar Rive voor gebruik in games.",
     "media": {
       "type": "afbeelding",

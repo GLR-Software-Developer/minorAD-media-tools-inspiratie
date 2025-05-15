@@ -13,7 +13,7 @@ const route = useRoute();
     </main>
     <nav class="bottom-nav">
       <div class="nav-content">
-        <template v-for="(item, index) in menuItems" :key="item.slug">
+        <template v-for="item in menuItems" :key="item.slug">
           <router-link :to="`/${item.slug}`" :style="{ color: route.path === `/${item.slug}` ? item.color : undefined }">
             {{ item.title }}
           </router-link>

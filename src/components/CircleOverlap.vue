@@ -13,7 +13,6 @@ const diameter = computed(() => radius * 2.5);
 
 // Refs voor de cirkels
 const circleRefs = ref<HTMLElement[]>([]);
-const circleLabels = ref<HTMLElement[]>([]);
 
 // Hoeken voor de drie cirkels (in radialen)
 const angles = [-90, 150, 30].map(a => a * Math.PI / 180);
@@ -205,146 +204,6 @@ function genereeerSpiralePunten(): { tech: Technologie; x: number; y: number; ca
     return punten;
   }
   
-  // Verbeterde sunflower algoritme voor optimale ruimtevulling
-  function verdeelPuntenVolgensVerbeterdeSunflower(
-    middelpunt: {x: number, y: number},
-    maxRadius: number,
-    aantalPunten: number,
-    cirkelIndices: number[]
-  ): {x: number, y: number}[] {
-    const punten: {x: number, y: number}[] = [];
-    const PHI = (1 + Math.sqrt(5)) / 2; // Gulden snede
-    
-    // Vergroot de maximale radius voor betere spreiding
-    maxRadius = maxRadius * 0.92; // 92% van de maximale radius
-    
-    // Voor kleine aantallen punten, maak een specifieke verdeling
-    if (aantalPunten <= 6) {
-      if (aantalPunten === 1) {
-        // Enkel punt: plaats in het midden
-        punten.push({x: middelpunt.x, y: middelpunt.y});
-      } else if (aantalPunten <= 3) {
-        // 2-3 punten: plaats op een cirkel met offset
-        const radius = maxRadius * 0.65;
-        
-        for (let i = 0; i < aantalPunten; i++) {
-          const hoek = (i / aantalPunten) * Math.PI * 2 + Math.PI / aantalPunten;
-          
-          let x = middelpunt.x + radius * Math.cos(hoek);
-          let y = middelpunt.y + radius * Math.sin(hoek);
-          
-          // Controleer geldigheid
-          const overlap = bepaalCirkelOverlap(x, y);
-          const isGeldig = controleerGeldigeOverlap(overlap, cirkelIndices);
-          
-          if (!isGeldig) {
-            const kleinerRadius = radius * 0.75;
-            x = middelpunt.x + kleinerRadius * Math.cos(hoek);
-            y = middelpunt.y + kleinerRadius * Math.sin(hoek);
-          }
-          
-          punten.push({x, y});
-        }
-      } else {
-        // 4-6 punten: Plaats 1 in het midden, rest op een cirkel
-        punten.push({x: middelpunt.x, y: middelpunt.y});
-        
-        const radius = maxRadius * 0.7;
-        for (let i = 1; i < aantalPunten; i++) {
-          const hoek = ((i - 1) / (aantalPunten - 1)) * Math.PI * 2;
-          
-          let x = middelpunt.x + radius * Math.cos(hoek);
-          let y = middelpunt.y + radius * Math.sin(hoek);
-          
-          const overlap = bepaalCirkelOverlap(x, y);
-          const isGeldig = controleerGeldigeOverlap(overlap, cirkelIndices);
-          
-          if (!isGeldig) {
-            const kleinerRadius = radius * 0.8;
-            x = middelpunt.x + kleinerRadius * Math.cos(hoek);
-            y = middelpunt.y + kleinerRadius * Math.sin(hoek);
-          }
-          
-          punten.push({x, y});
-        }
-      }
-      
-      return punten;
-    }
-    
-    // Bereken optimale parameter voor ruimteverdeling
-    const c = 0.8; // Parameter voor verdeling (0.5 - 1.0, hoger = meer naar buiten)
-    
-    // Voor grotere aantallen punten: geoptimaliseerd sunflower patroon
-    for (let i = 0; i < aantalPunten; i++) {
-      // Verdeel radius volgens een optimale verdeling voor gelijkmatige dichtheid
-      // met nadruk op gebruik van buitenste gebieden
-      const radius = maxRadius * Math.pow(i / aantalPunten, c);
-      
-      // Sunflower hoek met kleine variatie
-      const hoek = i * 2 * Math.PI / (PHI * PHI) + (Math.random() * 0.08 - 0.04);
-      
-      let x = middelpunt.x + radius * Math.cos(hoek);
-      let y = middelpunt.y + radius * Math.sin(hoek);
-      
-      // Controleer of het punt geldig is
-      const overlap = bepaalCirkelOverlap(x, y);
-      let geldigPunt = controleerGeldigeOverlap(overlap, cirkelIndices);
-      
-      if (!geldigPunt) {
-        // Probeer eerst nabijgelegen hoeken
-        for (let j = 1; j <= 6 && !geldigPunt; j++) {
-          const rotatie = j * Math.PI / 30; // 6 graden
-          
-          // Met de klok mee
-          const testHoek1 = hoek + rotatie;
-          x = middelpunt.x + radius * Math.cos(testHoek1);
-          y = middelpunt.y + radius * Math.sin(testHoek1);
-          
-          const overlap1 = bepaalCirkelOverlap(x, y);
-          geldigPunt = controleerGeldigeOverlap(overlap1, cirkelIndices);
-          
-          if (geldigPunt) break;
-          
-          // Tegen de klok in
-          const testHoek2 = hoek - rotatie;
-          x = middelpunt.x + radius * Math.cos(testHoek2);
-          y = middelpunt.y + radius * Math.sin(testHoek2);
-          
-          const overlap2 = bepaalCirkelOverlap(x, y);
-          geldigPunt = controleerGeldigeOverlap(overlap2, cirkelIndices);
-          
-          if (geldigPunt) break;
-        }
-        
-        // Als dat niet werkt, probeer kleinere radiussen
-        if (!geldigPunt) {
-          for (let r = 0.9; r >= 0.3 && !geldigPunt; r -= 0.15) {
-            const nieuweRadius = radius * r;
-            
-            x = middelpunt.x + nieuweRadius * Math.cos(hoek);
-            y = middelpunt.y + nieuweRadius * Math.sin(hoek);
-            
-            const overlapAlt = bepaalCirkelOverlap(x, y);
-            geldigPunt = controleerGeldigeOverlap(overlapAlt, cirkelIndices);
-            
-            if (geldigPunt) break;
-          }
-        }
-        
-        // Als laatste optie, plaats dichter bij het middelpunt
-        if (!geldigPunt) {
-          x = middelpunt.x + (x - middelpunt.x) * 0.35;
-          y = middelpunt.y + (y - middelpunt.y) * 0.35;
-        }
-      }
-      
-      punten.push({x, y});
-    }
-    
-    return punten;
-  }
-  
   // Genereer posities voor elke groep
   for (const key in categorieGroepen) {
     const categorieën = key.split('-');
@@ -458,7 +317,12 @@ onMounted(() => {
   <div class="circle-container">
     <div class="circle-square">
       <!-- De drie cirkels -->
-      <div v-for="(position, index) in positions" :key="index" class="circle-wrapper" :ref="(el: HTMLElement | null) => { if (el) circleRefs[index] = el }">
+      <div 
+        v-for="(position, index) in positions" 
+        :key="index" 
+        class="circle-wrapper" 
+        :ref="(el: any) => { if (el && typeof el === 'object' && 'tagName' in el) circleRefs[index] = el }"
+      >
         <Circle
           :color="index === 0 ? '#4FC3F7' : index === 1 ? '#F44336' : '#FFB300'"
           :label="index === 0 ? 'Audio' : index === 1 ? 'Visueel' : 'Data'"
