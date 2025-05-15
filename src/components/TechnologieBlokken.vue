@@ -8,12 +8,8 @@
       <div v-if="tech.notitie" class="tech-note">{{ tech.notitie }}</div>
       <div class="tech-omschrijving">{{ tech.omschrijving }}</div>
       <div class="tech-links">
-        <a v-if="tech.links && tech.links.website" :href="tech.links.website" target="_blank" title="Website" class="icon-link">
-          <svg width="20" height="20" viewBox="0 0 20 20"><circle cx="10" cy="10" r="9" stroke="#888" stroke-width="2" fill="none"/><path d="M5 10a5 5 0 0 1 10 0" stroke="#888" stroke-width="2" fill="none"/></svg>
-        </a>
-        <a v-if="tech.links && tech.links.documentatie" :href="tech.links.documentatie" target="_blank" title="Documentatie" class="icon-link">
-          <svg width="20" height="20" viewBox="0 0 20 20"><rect x="4" y="3" width="12" height="14" rx="2" stroke="#888" stroke-width="2" fill="none"/><line x1="7" y1="7" x2="13" y2="7" stroke="#888" stroke-width="2"/><line x1="7" y1="11" x2="13" y2="11" stroke="#888" stroke-width="2"/></svg>
-        </a>
+        <a v-if="tech.links && tech.links.website" :href="tech.links.website" target="_blank" title="Website" class="icon-link" v-html="circleIcon" />
+        <a v-if="tech.links && tech.links.documentatie" :href="tech.links.documentatie" target="_blank" title="Documentatie" class="icon-link" v-html="documentIcon" />
       </div>
       <div v-if="tech.links && tech.links.tutorials && tech.links.tutorials.length" class="tech-tutorials">
         <ul class="tutorials-list">
@@ -29,12 +25,24 @@
 
 <script setup>
 import { computed } from 'vue';
+import { Icon } from 'jao-icons';
 
 const props = defineProps({
   technologieen: {
     type: Array,
     required: true
   }
+});
+
+// Converteer de binary arrays naar SVG strings
+const circleIcon = computed(() => {
+  const svg = Icon('medium/external-link');
+  return svg.outerHTML;
+});
+
+const documentIcon = computed(() => {
+  const svg = Icon('medium/document');
+  return svg.outerHTML;
 });
 
 const gesorteerdetechnologieen = computed(() => {
@@ -46,7 +54,7 @@ const gesorteerdetechnologieen = computed(() => {
 });
 </script>
 
-<style scoped>
+<style>
 .tech-blokken {
   display: flex;
   flex-direction: column;
@@ -130,13 +138,30 @@ const gesorteerdetechnologieen = computed(() => {
 .icon-link {
   display: inline-flex;
   align-items: center;
-  color: #888;
   transition: color 0.2s;
 }
 
 .icon-link:hover {
   color: #222;
 }
+.icon-link svg {
+    width: 19px;
+    height: 19px;
+}
+
+.icon-link .jao-icon-cell[v='0'] {
+  fill: transparent;
+}
+
+  
+/*   
+rect["v=0"] {
+    fill: #4FC3F7;
+}
+
+rect["v=1"] {
+    fill: #F44336;
+} */
 
 .tech-tutorials {
   margin-top: 0.2rem;

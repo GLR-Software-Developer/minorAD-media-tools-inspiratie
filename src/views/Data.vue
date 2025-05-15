@@ -2,6 +2,7 @@
 import menuItems from '../data/menuItems.json';
 import '../assets/detailPage.css';
 import TechnologieBlokken from '../components/TechnologieBlokken.vue';
+import BackButton from '../components/BackButton.vue';
 import technologieData from '../data/technologieen.json';
 
 // Zoek de data-item gegevens
@@ -16,6 +17,7 @@ const technologieen = technologieData.filter(tech => {
 
 <template>
   <div class="detail-page" id="data" :style="{ '--circle-color': dataItem.color }">
+    <BackButton />
     <div class="custom-circle" :style="{ backgroundColor: dataItem.color }"></div>
     <span class="custom-circle-text">{{ dataItem.title }}</span>
     <div class="jumbotron">
