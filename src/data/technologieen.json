@@ -265,6 +265,8 @@
       "website": "https://ollama.ai/",
       "documentatie": "https://github.com/ollama/ollama",
       "tutorials": [
+          { "titel": "Build AI Apps Locally", "url": "https://www.youtube.com/watch?v=GWB9ApTPTv4" },
+          { "titel": "Create a Local AI Chatbot with JavaScript and Node.js", "url": "https://www.youtube.com/watch?v=O_MYsAtqRq0" }
       ]
     },
     "examples": [

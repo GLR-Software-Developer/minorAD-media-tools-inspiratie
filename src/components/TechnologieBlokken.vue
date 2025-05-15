@@ -1,6 +1,6 @@
 <template>
   <div class="tech-blokken">
-    <div v-for="tech in gesorteerdetechnologieen" :key="tech.naam" class="tech-blok">
+    <div v-for="tech in gesorteerdetechnologieen" :key="tech.naam" class="tech-blok" :id="tech.naam.toLowerCase().replace(/ /g, '-')">
       <div class="tech-header">
         <span v-for="type in (Array.isArray(tech.type) ? tech.type : [tech.type])" :key="type" class="type-dot" :class="type"></span>
         <span class="tech-title">{{ tech.naam }}</span>
@@ -12,6 +12,7 @@
         <a v-if="tech.links && tech.links.documentatie" :href="tech.links.documentatie" target="_blank" title="Documentatie" class="icon-link" v-html="documentIcon" />
       </div>
       <div v-if="tech.links && tech.links.tutorials && tech.links.tutorials.length" class="tech-tutorials">
+        <span class="tutorials-label">Handige links:</span>
         <ul class="tutorials-list">
           <li v-for="(tut, i) in tech.links.tutorials" :key="i">
             <a v-if="tut.url" :href="tut.url" target="_blank">{{ tut.titel || tut.url }}</a>

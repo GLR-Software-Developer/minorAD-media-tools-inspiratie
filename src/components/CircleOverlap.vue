@@ -435,9 +435,8 @@ const alleStipPosities = genereeerSpiralePunten();
   display: flex;
   align-items: center;
   justify-content: center;
-  background: white;
-  overflow: hidden;
 }
+
 .circle-square {
   position: relative;
   width: 70vmin;

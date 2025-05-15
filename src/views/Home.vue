@@ -29,16 +29,6 @@ import CircleOverlap from '../components/CircleOverlap.vue';
   position: relative;
 }
 
-.circle-container {
-  position: relative;
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: white;
-  overflow: hidden;
-}
 .circle-square {
   position: relative;
   width: 70vmin;

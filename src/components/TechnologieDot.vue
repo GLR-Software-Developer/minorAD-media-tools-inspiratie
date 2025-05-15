@@ -1,7 +1,9 @@
 <script setup lang="ts">
 import { ref, computed, onBeforeUnmount } from 'vue';
+import { useRouter } from 'vue-router';
 import type { Technologie } from '../services/TechnologieService';
 
+const router = useRouter();
 const props = defineProps<{
   technologie: Technologie;
   x: number; // x-positie binnen cirkel (in %)
@@ -21,6 +23,18 @@ const popupVisible = computed(() => showPopup.value || isPopupHovered.value);
 
 // Z-index aanpassen op basis van hover of popup zichtbaar
 const zIndex = computed(() => (isHovered.value || popupVisible.value) ? 20 : 3);
+
+// Bereken het anker ID voor de technologie
+const techAnchorId = computed(() => props.technologie.naam.toLowerCase().replace(/ /g, '-'));
+
+// Functie om naar het anker te navigeren
+const navigateToTech = () => {
+  console.log('Navigatie naar:', techAnchorId.value);
+  const type = Array.isArray(props.technologie.type) 
+    ? props.technologie.type[0].toLowerCase() 
+    : props.technologie.type.toLowerCase();
+  router.push(`/${type}#${techAnchorId.value}`);
+};
 
 // Functie om een eventuele lopende timer te annuleren
 const clearCloseTimer = () => {
@@ -76,6 +90,7 @@ onBeforeUnmount(() => {
     :style="{ top: `${y}%`, left: `${x}%`, zIndex: zIndex }"
     @mouseenter="handleMouseEnterDot"
     @mouseleave="handleMouseLeaveDot"
+    @click="navigateToTech"
   >
     <!-- Popup met meer informatie (nu boven de stip) -->
     <div v-if="popupVisible" 
