@@ -196,7 +196,7 @@
       ]
     },
     "examples": [
-      { "title": "", "note": "", "image": "", "url": "" },
+      { "title": "Homepage Hero Animation", "note": "Interactieve animatie met stap-voor-stap uitleg", "image": "/projects/rive/homepage-hero-animation.png", "url": "https://rive.app/use-cases/hero-animations" },
       { "title": "", "note": "", "image": "", "url": "" },
       { "title": "", "note": "", "image": "", "url": "" }
     ]
@@ -214,7 +214,7 @@
       ]
     },
     "examples": [
-      { "title": "", "note": "", "image": "", "url": "" },
+      { "title": "Mandelbrot", "note": "3-dimensionale fractals", "image": "/projects/houdini/mandelbrot.png", "url": "https://www.youtube.com/watch?v=_mwJ7mlYRWg" },
       { "title": "", "note": "", "image": "", "url": "" },
       { "title": "", "note": "", "image": "", "url": "" }
     ]
