@@ -283,7 +283,7 @@ rect["v=1"] {
 
 .example-card {
   flex: 0 0 auto;
-  /* width: 300px; */
+  width: 320px;
   background: white;
   border-radius: 8px;
   overflow: hidden;

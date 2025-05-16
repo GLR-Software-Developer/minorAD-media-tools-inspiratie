@@ -12,7 +12,7 @@
       ]
     },
     "examples": [
-      { "title": "", "note": "", "image": "", "url": "" },
+      { "title": "Live set by Sam Aaron", "note": "Muziek programmeren met Sonic Pi (realtime)", "image": "/projects/sonic-pi/live-set.png", "url": "https://youtu.be/ZrEXCBMA1Ag?si=r4HDQM1nkd9VnFnn&t=946" },
       { "title": "", "note": "", "image": "", "url": "" },
       { "title": "", "note": "", "image": "", "url": "" }
     ]
@@ -30,7 +30,7 @@
       ]
     },
     "examples": [
-      { "title": "", "note": "", "image": "", "url": "" },
+      { "title": "Demo reel 2024", "image": "/projects/touchdesigner/demo-reel-2024.png", "url": "https://www.youtube.com/watch?v=1s4kh0eRhUs" },
       { "title": "", "note": "", "image": "", "url": "" },
       { "title": "", "note": "", "image": "", "url": "" }
     ]
@@ -104,8 +104,8 @@
       ]
     },
     "examples": [
-      { "title": "", "note": "", "image": "", "url": "" },
-      { "title": "", "note": "", "image": "", "url": "" },
+      { "title": "Rad zonder fortuin", "note": "3D model gemaakt met Blender, vertaald naar web met Three.js. Animatie gemaakt met After Effects, vertaald naar web met Lottie.", "image": "/projects/threejs/rad-zonder-fortuin.png", "url": "https://gist.github.com/swfh/f794231ffcbb86c24b5a70a23b5a5ffa" },
+      { "title": "Troijs", "note": "ThreeJS met Vite & Vue3 (check de demo's)", "image": "/projects/threejs/troijs.png", "url": "https://github.com/troisjs/trois" },
       { "title": "", "note": "", "image": "", "url": "" }
     ]
   },
@@ -159,7 +159,7 @@
       ]
     },
     "examples": [
-      { "title": "", "note": "", "image": "", "url": "" },
+      { "title": "Demo (Chrome only)", "note": "Herkent gesproken tekst en selecteert het", "image": "/projects/web-speech-api/demo.png", "url": "https://codepen.io/Rumyra/pen/NWLyLe" },
       { "title": "", "note": "", "image": "", "url": "" },
       { "title": "", "note": "", "image": "", "url": "" }
     ]
@@ -197,7 +197,7 @@
     },
     "examples": [
       { "title": "Homepage Hero Animation", "note": "Interactieve animatie met stap-voor-stap uitleg", "image": "/projects/rive/homepage-hero-animation.png", "url": "https://rive.app/use-cases/hero-animations" },
-      { "title": "", "note": "", "image": "", "url": "" },
+      { "title": "Duolingo karakters", "note": "Achtergrond over hoe Duolingo hun interactieve karakters ontwerpt met Rive", "image": "/projects/rive/duolingo-karakters.png", "url": "https://blog.duolingo.com/world-character-visemes/" },
       { "title": "", "note": "", "image": "", "url": "" }
     ]
   },
