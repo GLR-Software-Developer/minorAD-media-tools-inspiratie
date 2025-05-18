@@ -57,7 +57,7 @@
   {
     "naam": "P5.js",
     "omschrijving": "Een JavaScript-bibliotheek waarmee je creatieve en interactieve visuele en audio projecten kunt maken in de browser.",
-    "note": "Fork van Processing voor het web",
+    "note": "",
     "type": ["audio", "visueel"],
     "links": {
       "website": "https://p5js.org/",
@@ -68,7 +68,7 @@
       ]
     },
     "examples": [
-      { "title": "", "note": "", "image": "", "url": "" },
+      { "title": "De schreeuw (interactief)", "note": "Digitale reproductie van Edvard Munch's 'Schreeuw', klik op de afbeelding voor een daadwerkelijke schreeuw.", "image": "/projects/p5js/edvard-munch.png", "url": "https://p5-edvard-munch.jeffreyarts.nl/" },
       { "title": "", "note": "", "image": "", "url": "" },
       { "title": "", "note": "", "image": "", "url": "" }
     ]
@@ -233,9 +233,8 @@
       ]
     },
     "examples": [
-      { "title": "", "note": "", "image": "", "url": "" },
-      { "title": "", "note": "", "image": "", "url": "" },
-      { "title": "", "note": "", "image": "", "url": "" }
+      { "title": "Invallende blokjes", "note": "Leuke toevoeging aan een statische website", "image": "/projects/matterjs/ncreate.png", "url": "https://ncreation.nl/#all-features" },
+      { "title": "Rupsje", "note": "Een rupsje dat over een website kan lopen", "image": "/projects/matterjs/rupsje.png", "url": "https://vlinder.jeffreyarts.nl/catterpillar-mouth" },
     ]
   },
   {
