@@ -234,7 +234,7 @@
     },
     "examples": [
       { "title": "Invallende blokjes", "note": "Leuke toevoeging aan een statische website", "image": "/projects/matterjs/ncreate.png", "url": "https://ncreation.nl/#all-features" },
-      { "title": "Rupsje", "note": "Een rupsje dat over een website kan lopen", "image": "/projects/matterjs/rupsje.png", "url": "https://vlinder.jeffreyarts.nl/catterpillar-mouth" },
+      { "title": "Rupsje", "note": "Een rupsje dat over een website kan lopen", "image": "/projects/matterjs/rupsje.png", "url": "https://vlinder.jeffreyarts.nl/catterpillar-mouth" }
     ]
   },
   {
