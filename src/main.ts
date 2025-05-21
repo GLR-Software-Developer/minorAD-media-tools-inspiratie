@@ -34,7 +34,7 @@ const routes = [
 
 // Router instantie maken
 const router = createRouter({
-  history: createWebHistory(),
+  history: createWebHistory(import.meta.env.PROD ? '/minor-ad/4/current/' : ''),
   routes
 })
 

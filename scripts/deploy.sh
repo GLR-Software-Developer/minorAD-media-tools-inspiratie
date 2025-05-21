@@ -196,7 +196,6 @@ if [ "$skip_deploy" = false ]; then
     if ssh $DEPLOYMENT_USER@$DEPLOYMENT_HOST test -d "$DEPLOYMENT_PATH/current"; then
         timestamp=$(date +%Y%m%d-%H%M%S)
         ssh $DEPLOYMENT_USER@$DEPLOYMENT_HOST "cp -r $DEPLOYMENT_PATH/current $DEPLOYMENT_PATH/bk_$timestamp; \
-        chown -R $DEPLOYMENT_USER:web $DEPLOYMENT_PATH/bk_$timestamp; \
         "
     fi
 
@@ -205,7 +204,6 @@ if [ "$skip_deploy" = false ]; then
         unzip $DEPLOYMENT_PATH/deploy.zip -d $DEPLOYMENT_PATH/tmp; 
         rm $DEPLOYMENT_PATH/current -rf; \
         mv $DEPLOYMENT_PATH/tmp/dist $DEPLOYMENT_PATH/current; \
-        chown -R $DEPLOYMENT_USER:web $DEPLOYMENT_PATH/current; \
         rm $DEPLOYMENT_PATH/tmp -rf; \
         exit"
   } >> deploy.log 2>&1

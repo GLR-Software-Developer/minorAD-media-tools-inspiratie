@@ -12,7 +12,7 @@
       ]
     },
     "examples": [
-      { "title": "Live set by Sam Aaron", "note": "Muziek programmeren met Sonic Pi (realtime)", "image": "/projects/sonic-pi/live-set.png", "url": "https://youtu.be/ZrEXCBMA1Ag?si=r4HDQM1nkd9VnFnn&t=946" },
+      { "title": "Live set by Sam Aaron", "note": "Muziek programmeren met Sonic Pi (realtime)", "image": "projects/sonic-pi/live-set.png", "url": "https://youtu.be/ZrEXCBMA1Ag?si=r4HDQM1nkd9VnFnn&t=946" },
       { "title": "", "note": "", "image": "", "url": "" },
       { "title": "", "note": "", "image": "", "url": "" }
     ]
@@ -30,7 +30,7 @@
       ]
     },
     "examples": [
-      { "title": "Demo reel 2024", "image": "/projects/touchdesigner/demo-reel-2024.png", "url": "https://www.youtube.com/watch?v=1s4kh0eRhUs" },
+      { "title": "Demo reel 2024", "image": "projects/touchdesigner/demo-reel-2024.png", "url": "https://www.youtube.com/watch?v=1s4kh0eRhUs" },
       { "title": "", "note": "", "image": "", "url": "" },
       { "title": "", "note": "", "image": "", "url": "" }
     ]
@@ -68,7 +68,7 @@
       ]
     },
     "examples": [
-      { "title": "De schreeuw (interactief)", "note": "Digitale reproductie van Edvard Munch's 'Schreeuw', klik op de afbeelding voor een daadwerkelijke schreeuw.", "image": "/projects/p5js/edvard-munch.png", "url": "https://p5-edvard-munch.jeffreyarts.nl/" },
+      { "title": "De schreeuw (interactief)", "note": "Digitale reproductie van Edvard Munch's 'Schreeuw', klik op de afbeelding voor een daadwerkelijke schreeuw.", "image": "projects/p5js/edvard-munch.png", "url": "https://p5-edvard-munch.jeffreyarts.nl/" },
       { "title": "", "note": "", "image": "", "url": "" },
       { "title": "", "note": "", "image": "", "url": "" }
     ]
@@ -104,9 +104,9 @@
       ]
     },
     "examples": [
-      { "title": "Rad zonder fortuin", "note": "3D model gemaakt met Blender, vertaald naar web met Three.js. Animatie gemaakt met After Effects, vertaald naar web met Lottie.", "image": "/projects/threejs/rad-zonder-fortuin.png", "url": "https://gist.github.com/swfh/f794231ffcbb86c24b5a70a23b5a5ffa" },
-      { "title": "Troijs", "note": "ThreeJS met Vite & Vue3 (check de demo's)", "image": "/projects/threejs/troijs.png", "url": "https://github.com/troisjs/trois" },
-      { "title": "", "note": "", "image": "", "url": "" }
+      { "title": "Rad zonder fortuin", "note": "3D model gemaakt met Blender, vertaald naar web met Three.js. Animatie gemaakt met After Effects, vertaald naar web met Lottie.", "image": "projects/threejs/rad-zonder-fortuin.png", "url": "https://gist.github.com/swfh/f794231ffcbb86c24b5a70a23b5a5ffa" },
+      { "title": "Troijs", "note": "ThreeJS met Vite & Vue3 (check de demo's)", "image": "projects/threejs/troijs.png", "url": "https://github.com/troisjs/trois" },
+      { "title": "Interactieve showreel", "note": "Make me Pulse end of the year showreel 2018", "image": "projects/threejs/makemepulse.jpg", "url": "https://2018.makemepulse.com" }
     ]
   },
   {
@@ -159,7 +159,7 @@
       ]
     },
     "examples": [
-      { "title": "Demo (Chrome only)", "note": "Herkent gesproken tekst en selecteert het", "image": "/projects/web-speech-api/demo.png", "url": "https://codepen.io/Rumyra/pen/NWLyLe" },
+      { "title": "Demo (Chrome only)", "note": "Herkent gesproken tekst en selecteert het", "image": "projects/web-speech-api/demo.png", "url": "https://codepen.io/Rumyra/pen/NWLyLe" },
       { "title": "", "note": "", "image": "", "url": "" },
       { "title": "", "note": "", "image": "", "url": "" }
     ]
@@ -196,8 +196,8 @@
       ]
     },
     "examples": [
-      { "title": "Homepage Hero Animation", "note": "Interactieve animatie met stap-voor-stap uitleg", "image": "/projects/rive/homepage-hero-animation.png", "url": "https://rive.app/use-cases/hero-animations" },
-      { "title": "Duolingo karakters", "note": "Achtergrond over hoe Duolingo hun interactieve karakters ontwerpt met Rive", "image": "/projects/rive/duolingo-karakters.png", "url": "https://blog.duolingo.com/world-character-visemes/" },
+      { "title": "Homepage Hero Animation", "note": "Interactieve animatie met stap-voor-stap uitleg", "image": "projects/rive/homepage-hero-animation.png", "url": "https://rive.app/use-cases/hero-animations" },
+      { "title": "Duolingo karakters", "note": "Achtergrond over hoe Duolingo hun interactieve karakters ontwerpt met Rive", "image": "projects/rive/duolingo-karakters.png", "url": "https://blog.duolingo.com/world-character-visemes/" },
       { "title": "", "note": "", "image": "", "url": "" }
     ]
   },
@@ -214,7 +214,7 @@
       ]
     },
     "examples": [
-      { "title": "Mandelbrot", "note": "3-dimensionale fractals", "image": "/projects/houdini/mandelbrot.png", "url": "https://www.youtube.com/watch?v=_mwJ7mlYRWg" },
+      { "title": "Mandelbrot", "note": "3-dimensionale fractals", "image": "projects/houdini/mandelbrot.png", "url": "https://www.youtube.com/watch?v=_mwJ7mlYRWg" },
       { "title": "", "note": "", "image": "", "url": "" },
       { "title": "", "note": "", "image": "", "url": "" }
     ]
@@ -233,8 +233,9 @@
       ]
     },
     "examples": [
-      { "title": "Invallende blokjes", "note": "Leuke toevoeging aan een statische website", "image": "/projects/matterjs/ncreate.png", "url": "https://ncreation.nl/#all-features" },
-      { "title": "Rupsje", "note": "Een rupsje dat over een website kan lopen", "image": "/projects/matterjs/rupsje.png", "url": "https://vlinder.jeffreyarts.nl/catterpillar-mouth" }
+      { "title": "Invallende blokjes", "note": "Leuke toevoeging aan een statische website", "image": "projects/matterjs/ncreate.png", "url": "https://ncreation.nl/#all-features" },
+      { "title": "Rupsje", "note": "Een rupsje dat over een website kan lopen", "image": "projects/matterjs/rupsje.png", "url": "https://vlinder.jeffreyarts.nl/catterpillar-mouth" },
+      { "title": "Ballon effect", "note": "Zitten ook een hoop toffe shader effecten tussen", "image": "projects/matterjs/dream.jpg", "url": "https://2018.makemepulse.com/" }
     ]
   },
   {
@@ -250,9 +251,8 @@
       ]
     },
     "examples": [
-      { "title": "", "note": "", "image": "", "url": "" },
-      { "title": "", "note": "", "image": "", "url": "" },
-      { "title": "", "note": "", "image": "", "url": "" }
+      { "title": "Sarcastische chatbot", "note": "Sarcastische chatbot gemaakt met OpenAI API", "image": "projects/llm/sarcastic-chatbot.png", "url": "https://platform.openai.com/docs/examples/default-marv-sarcastic-chat" },
+      { "title": "Natural language to SQL", "note": "SQL queries maken op basis van engels", "image": "projects/llm/natural-language-to-sql.png", "url": "https://platform.openai.com/docs/examples/default-sql-translate" }
     ]
   },
   {
@@ -287,7 +287,7 @@
       ]
     },
     "examples": [
-      { "title": "Live coding with Hydra", "note": "Livestream van iemand die live codeert met Hydra", "image": "/projects/hydra/live-coding-with-hydra.png", "url": "https://www.youtube.com/watch?v=NX2BXWuVtRM" }
+      { "title": "Live coding with Hydra", "note": "Livestream van iemand die live codeert met Hydra", "image": "projects/hydra/live-coding-with-hydra.png", "url": "https://www.youtube.com/watch?v=NX2BXWuVtRM" }
     ]
   },
   {
@@ -306,6 +306,23 @@
       { "title": "", "note": "", "image": "", "url": "" },
       { "title": "", "note": "", "image": "", "url": "" },
       { "title": "", "note": "", "image": "", "url": "" }
+    ]
+  },
+  {
+    "naam": "OpenMaps",
+    "omschrijving": "Een verzameling van open-source mapping tools en bibliotheken voor het maken van interactieve kaarten en geografische visualisaties.",
+    "note": "Inclusief OpenStreetMap, Leaflet, Mapbox en andere open-source mapping tools",
+    "type": ["data"],
+    "links": {
+      "website": "https://www.openstreetmap.org/",
+      "documentatie": "https://wiki.openstreetmap.org/wiki/Main_Page",
+      "tutorials": [
+        { "title": "Leaflet Quick Start Guide", "url": "https://leafletjs.com/examples/quick-start/" },
+        { "title": "Mapbox GL JS Tutorial", "url": "https://docs.mapbox.com/mapbox-gl-js/guides/" }
+      ]
+    },
+    "examples": [
+      { "title": "Marine traffic", "note": "Kaart met alle schepen in de wereld", "image": "projects/openmaps/marine-traffic.png", "url": "https://www.marinetraffic.com/en/ais/home/centerx:-12.0/centery:25.0/zoom:4" }
     ]
   }
 ] 
