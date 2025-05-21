@@ -265,7 +265,8 @@
       "documentatie": "https://github.com/ollama/ollama",
       "tutorials": [
           { "title": "Build AI Apps Locally", "url": "https://www.youtube.com/watch?v=GWB9ApTPTv4" },
-          { "title": "Create a Local AI Chatbot with JavaScript and Node.js", "url": "https://www.youtube.com/watch?v=O_MYsAtqRq0" }
+          { "title": "Create a Local AI Chatbot with JavaScript and Node.js", "url": "https://www.youtube.com/watch?v=O_MYsAtqRq0" },
+          { "title": "Maak je eigen Chatbot met Ollama & Node.js", "url": "https://medium.com/@santoshmouriya1234567890/ollama-js-make-your-own-chatbot-with-ollama-js-nodejs-and-html-css-and-javascript-d9fc225bf92f" }
       ]
     },
     "examples": [
@@ -322,7 +323,8 @@
       ]
     },
     "examples": [
-      { "title": "Marine traffic", "note": "Kaart met alle schepen in de wereld", "image": "projects/openmaps/marine-traffic.png", "url": "https://www.marinetraffic.com/en/ais/home/centerx:-12.0/centery:25.0/zoom:4" }
+      { "title": "Marine traffic", "note": "Kaart met alle schepen in de wereld", "image": "projects/openmaps/marine-traffic.png", "url": "https://www.marinetraffic.com/en/ais/home/centerx:-12.0/centery:25.0/zoom:4" },
+      { "title": "Stylized maps", "note": "Stijl kaarten volledig naar eigen wens", "image": "projects/openmaps/stylized-maps.png", "url": "https://www.instructables.com/How-to-Create-Custom-Stylized-Maps-Using-OpenStree/" }
     ]
   }
 ] 
