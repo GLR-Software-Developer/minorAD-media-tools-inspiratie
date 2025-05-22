@@ -284,6 +284,7 @@
       ]
     },
     "examples": [
+        { "title": " OSINT Framework", "note": "Presentatie van verschillende websites met gratis tools waar je informatie/data kunt halen", "image": "projects/d3/osintframework.png", "url": "https://osintframework.com/" }
     ]
   },
   {
