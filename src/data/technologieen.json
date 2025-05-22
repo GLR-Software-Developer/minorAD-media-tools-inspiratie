@@ -12,9 +12,7 @@
       ]
     },
     "examples": [
-      { "title": "Live set by Sam Aaron", "note": "Muziek programmeren met Sonic Pi (realtime)", "image": "projects/sonic-pi/live-set.png", "url": "https://youtu.be/ZrEXCBMA1Ag?si=r4HDQM1nkd9VnFnn&t=946" },
-      { "title": "", "note": "", "image": "", "url": "" },
-      { "title": "", "note": "", "image": "", "url": "" }
+      { "title": "Live set by Sam Aaron", "note": "Muziek programmeren met Sonic Pi (realtime)", "image": "projects/sonic-pi/live-set.png", "url": "https://youtu.be/ZrEXCBMA1Ag?si=r4HDQM1nkd9VnFnn&t=946" }
     ]
   },
   {
@@ -30,9 +28,7 @@
       ]
     },
     "examples": [
-      { "title": "Demo reel 2024", "image": "projects/touchdesigner/demo-reel-2024.png", "url": "https://www.youtube.com/watch?v=1s4kh0eRhUs" },
-      { "title": "", "note": "", "image": "", "url": "" },
-      { "title": "", "note": "", "image": "", "url": "" }
+      { "title": "Demo reel 2024", "image": "projects/touchdesigner/demo-reel-2024.png", "url": "https://www.youtube.com/watch?v=1s4kh0eRhUs" }
     ]
   },
   {
@@ -49,9 +45,8 @@
       ]
     },
     "examples": [
-      { "title": "", "note": "", "image": "", "url": "" },
-      { "title": "", "note": "", "image": "", "url": "" },
-      { "title": "", "note": "", "image": "", "url": "" }
+      { "title": "Pose detectie", "note": "Herken de positie van het lichaam uit een video", "image": "projects/mediapipe/Mediapipe-Poses-position.png", "url": "https://www.researchgate.net/figure/Mediapipe-Poses-position-detection-of-33-posture-joints-Mediapipe-has-many-functions_fig1_368864097" },
+      { "title": "Interface control met handbewegingen", "note": "", "image": "projects/mediapipe/muziek-speler-handbewegingen.png", "url": "https://www.youtube.com/watch?v=VcCnM5sF-aE" }
     ]
   },
   {
@@ -69,8 +64,8 @@
     },
     "examples": [
       { "title": "De schreeuw (interactief)", "note": "Digitale reproductie van Edvard Munch's 'Schreeuw', klik op de afbeelding voor een daadwerkelijke schreeuw.", "image": "projects/p5js/edvard-munch.png", "url": "https://p5-edvard-munch.jeffreyarts.nl/" },
-      { "title": "", "note": "", "image": "", "url": "" },
-      { "title": "", "note": "", "image": "", "url": "" }
+      { "title": "Tekst animatie effect", "note": "Worden stipjes geplaats op willekeurige plekken en deze vormen daarna de outline van een tekst", "image": "projects/p5js/tekst-animatie-effect.png", "url": "https://editor.p5js.org/KaroElisa/sketches/e7Kx36Ld2" },
+      { "title": "FizzBuzz", "note": "Visuele twist op het FizzBuzz probleem", "image": "projects/p5js/fizzbuzz.png", "url": "https://happycoding.io/tutorials/p5js/if-statements/fizz-buzz" }
     ]
   },
   {
@@ -86,9 +81,8 @@
       ]
     },
     "examples": [
-      { "title": "", "note": "", "image": "", "url": "" },
-      { "title": "", "note": "", "image": "", "url": "" },
-      { "title": "", "note": "", "image": "", "url": "" }
+      { "title": "Visuele equalizer", "note": "Programmeer visuele animaties met nodes in Jitter", "image": "projects/cycling74/visual-equalizer.png", "url": "https://elevenlabs.io/docs/product-guides/voices/voice-cloning" },
+      { "title": "Verchroomde badeend", "note": "Manipuleer 3D objecten nodes en code", "image": "projects/cycling74/jitter-2.png", "url": "https://www.youtube.com/watch?v=IEC33xc_pa0" }
     ]
   },
   {
@@ -122,14 +116,11 @@
       ]
     },
     "examples": [
-      { "title": "", "note": "", "image": "", "url": "" },
-      { "title": "", "note": "", "image": "", "url": "" },
-      { "title": "", "note": "", "image": "", "url": "" }
     ]
   },
   {
     "naam": "Tonal.js",
-    "omschrijving": "Een JavaScript-bibliotheek voor muziektheorie, waarmee je toonladders, akkoorden en toonhoogtes kunt analyseren en genereren.",
+    "omschrijving": "Een JavaScript-bibliotheek voor muziektheorie, waarmee je low-level geluiden kunt maken. Denk aan toonladders, akkoorden en toonhoogtes.",
     "note": "Onderdeel van de Tone.js familie van muzikale tools",
     "type": ["audio"],
     "links": {
@@ -140,9 +131,6 @@
       ]
     },
     "examples": [
-      { "title": "", "note": "", "image": "", "url": "" },
-      { "title": "", "note": "", "image": "", "url": "" },
-      { "title": "", "note": "", "image": "", "url": "" }
     ]
   },
   {
@@ -159,9 +147,7 @@
       ]
     },
     "examples": [
-      { "title": "Demo (Chrome only)", "note": "Herkent gesproken tekst en selecteert het", "image": "projects/web-speech-api/demo.png", "url": "https://codepen.io/Rumyra/pen/NWLyLe" },
-      { "title": "", "note": "", "image": "", "url": "" },
-      { "title": "", "note": "", "image": "", "url": "" }
+      { "title": "Demo (Chrome only)", "note": "Herkent gesproken tekst en selecteert het", "image": "projects/web-speech-api/demo.png", "url": "https://codepen.io/Rumyra/pen/NWLyLe" }
     ]
   },
   {
@@ -178,9 +164,8 @@
       ]
     },
     "examples": [
-      { "title": "", "note": "", "image": "", "url": "" },
-      { "title": "", "note": "", "image": "", "url": "" },
-      { "title": "", "note": "", "image": "", "url": "" }
+      { "title": "Text to speech", "image": "projects/elevenlabs/text-to-speech.png", "url": "https://elevenlabs.io/" },
+      { "title": "Voice cloning", "note": "Tool om ai-generated stemmen vorm te geven", "image": "projects/elevenlabs/voice-cloning.png", "url": "https://elevenlabs.io/docs/product-guides/voices/voice-cloning" }
     ]
   },
   {
@@ -197,8 +182,7 @@
     },
     "examples": [
       { "title": "Homepage Hero Animation", "note": "Interactieve animatie met stap-voor-stap uitleg", "image": "projects/rive/homepage-hero-animation.png", "url": "https://rive.app/use-cases/hero-animations" },
-      { "title": "Duolingo karakters", "note": "Achtergrond over hoe Duolingo hun interactieve karakters ontwerpt met Rive", "image": "projects/rive/duolingo-karakters.png", "url": "https://blog.duolingo.com/world-character-visemes/" },
-      { "title": "", "note": "", "image": "", "url": "" }
+      { "title": "Duolingo karakters", "note": "Achtergrond over hoe Duolingo hun interactieve karakters ontwerpt met Rive", "image": "projects/rive/duolingo-karakters.png", "url": "https://blog.duolingo.com/world-character-visemes/" }
     ]
   },
   {
@@ -215,8 +199,7 @@
     },
     "examples": [
       { "title": "Mandelbrot", "note": "3-dimensionale fractals", "image": "projects/houdini/mandelbrot.png", "url": "https://www.youtube.com/watch?v=_mwJ7mlYRWg" },
-      { "title": "", "note": "", "image": "", "url": "" },
-      { "title": "", "note": "", "image": "", "url": "" }
+      { "title": "DATA GATE", "note": "Generatieve installatie van Studio OUCHHH", "image": "projects/houdini/DATA_GATE.png", "url": "https://ouchhh.tv/DATAGATE" }
     ]
   },
   {
@@ -234,7 +217,7 @@
     },
     "examples": [
       { "title": "Invallende blokjes", "note": "Leuke toevoeging aan een statische website", "image": "projects/matterjs/ncreate.png", "url": "https://ncreation.nl/#all-features" },
-      { "title": "Rupsje", "note": "Een rupsje dat over een website kan lopen", "image": "projects/matterjs/rupsje.png", "url": "https://vlinder.jeffreyarts.nl/catterpillar-mouth" },
+      { "title": "Rupsje", "note": "Een rupsje dat over je scherm heen loopt en waar je mee kunt gooien", "image": "projects/matterjs/rupsje.png", "url": "https://vlinder.jeffreyarts.nl/catterpillar-mouth" },
       { "title": "Ballon effect", "note": "Zitten ook een hoop toffe shader effecten tussen", "image": "projects/matterjs/dream.jpg", "url": "https://2018.makemepulse.com/" }
     ]
   },
@@ -270,9 +253,6 @@
       ]
     },
     "examples": [
-      { "title": "", "note": "", "image": "", "url": "" },
-      { "title": "", "note": "", "image": "", "url": "" },
-      { "title": "", "note": "", "image": "", "url": "" }
     ]
   },
   {
@@ -304,9 +284,6 @@
       ]
     },
     "examples": [
-      { "title": "", "note": "", "image": "", "url": "" },
-      { "title": "", "note": "", "image": "", "url": "" },
-      { "title": "", "note": "", "image": "", "url": "" }
     ]
   },
   {
@@ -324,7 +301,8 @@
     },
     "examples": [
       { "title": "Marine traffic", "note": "Kaart met alle schepen in de wereld", "image": "projects/openmaps/marine-traffic.png", "url": "https://www.marinetraffic.com/en/ais/home/centerx:-12.0/centery:25.0/zoom:4" },
-      { "title": "Stylized maps", "note": "Stijl kaarten volledig naar eigen wens", "image": "projects/openmaps/stylized-maps.png", "url": "https://www.instructables.com/How-to-Create-Custom-Stylized-Maps-Using-OpenStree/" }
+      { "title": "Stylized maps", "note": "Stijl kaarten volledig naar eigen wens", "image": "projects/openmaps/stylized-maps.png", "url": "https://www.instructables.com/How-to-Create-Custom-Stylized-Maps-Using-OpenStree/" },
+      { "title": "Spomenik database", "note": "Locaties van Spomenik's in de balkan", "image": "projects/openmaps/spomenik.png", "url": "https://www.spomenikdatabase.org/map-directory" }
     ]
   }
 ] 
